@@ -7,11 +7,6 @@ We will take you on a journey through Angular 2 designs for the real world with 
 
 By the end of the book, you will understand the various features of Angular 2 and will be able to apply well-known, industry-proven design patterns in your work.
 
-## Disclaimer
-
-**This is a work in progress.** 
-The book is currently in the writing stage and will be released in January 2017.
-
 ## Repo Intent
 
 This repository contains the source code presented on the book. Here's are some short urls for direct access to chapters parts:
@@ -23,5 +18,10 @@ This repository contains the source code presented on the book. Here's are some 
 * http://bit.ly/angular2-patterns-chap2-part3 -> Adding a directive
 * http://bit.ly/angular2-patterns-chap2-part4 -> Binding parent variable to the directive
 * http://bit.ly/angular2-patterns-chap2-part5 -> Adding Pipes
+
+## Disclaimer
+
+**This is a work in progress.** 
+The book is currently in the writing stage and will be released in January 2017.
 
 
