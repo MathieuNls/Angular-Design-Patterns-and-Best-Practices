@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TriangleService } from '../triangle.service';
 
 @Component({
   selector: 'floyd',
@@ -10,28 +11,20 @@ import { Component } from '@angular/core';
 	<pre>
 		{{floydString}}
 	</pre>
-	`
+	`,
+	providers:   [TriangleService]
 })
 export class FloydComponent {
 
   private floydString:string = "";
-  private static startOfAlphabet = 97;
 
-  constructor() {
+  constructor(private triangleService:TriangleService) {
 
   }
 
   onClick(rows:number){
 
-  	let currentLetter = FloydComponent.startOfAlphabet;
-
-  	for (let i = 0; i < rows; i++) {
-  		for (let j = 0; j < i; j++) {
-  			this.floydString += String.fromCharCode(currentLetter) + " ";
-  			currentLetter++;
-  		}
-  		this.floydString += "\n\r";
-  	}
+  	this.floydString = this.triangleService.evenFloydTriangle(rows);
   }
 
 }
