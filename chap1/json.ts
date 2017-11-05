@@ -33,5 +33,3 @@ let userFromUJSONAPI: User = JSON
 
 
 userFromUJSONAPI.hello();
-
-InstanceLoader.getInstance<User>(window,) 
