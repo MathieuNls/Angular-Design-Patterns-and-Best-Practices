@@ -1,13 +1,12 @@
-import { bootstrap } from '@angular/platform-browser-dynamic';
 import { enableProdMode } from '@angular/core';
-import { environment } from './app/';
-import { FloydComponent } from './app/floyd/';
-import { TriangleService } from './app/triangle.service'
-import { MathComponent } from './app/math/math.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+import { environment } from './environments/environment';
 
 if (environment.production) {
   enableProdMode();
 }
 
-bootstrap(MathComponent, [TriangleService]);
-
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.log(err));

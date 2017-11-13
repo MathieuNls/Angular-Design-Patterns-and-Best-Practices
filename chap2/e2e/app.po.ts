@@ -1,9 +1,11 @@
-export class Chap2Page {
+import { browser, by, element } from 'protractor';
+
+export class AppPage {
   navigateTo() {
     return browser.get('/');
   }
 
   getParagraphText() {
-    return element(by.css('chap2-app h1')).getText();
+    return element(by.css('app-root h1')).getText();
   }
 }

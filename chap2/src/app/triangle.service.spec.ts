@@ -1,18 +1,15 @@
-/* tslint:disable:no-unused-variable */
+import { TestBed, inject } from '@angular/core/testing';
 
-import {
-  beforeEach, beforeEachProviders,
-  describe, xdescribe,
-  expect, it, xit,
-  async, inject
-} from '@angular/core/testing';
 import { TriangleService } from './triangle.service';
 
-describe('Triangle Service', () => {
-  beforeEachProviders(() => [TriangleService]);
+describe('TriangleService', () => {
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [TriangleService]
+    });
+  });
 
-  it('should ...',
-      inject([TriangleService], (service: TriangleService) => {
+  it('should be created', inject([TriangleService], (service: TriangleService) => {
     expect(service).toBeTruthy();
   }));
 });
