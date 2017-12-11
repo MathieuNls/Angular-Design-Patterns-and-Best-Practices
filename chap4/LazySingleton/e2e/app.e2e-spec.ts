@@ -1,14 +1,14 @@
-import { Chap3Page } from './app.po';
+import { AppPage } from './app.po';
 
-describe('chap3 App', function() {
-  let page: Chap3Page;
+describe('lazy-singleton App', () => {
+  let page: AppPage;
 
   beforeEach(() => {
-    page = new Chap3Page();
+    page = new AppPage();
   });
 
-  it('should display message saying app works', () => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('app works!');
+    expect(page.getParagraphText()).toEqual('Welcome to app!');
   });
 });

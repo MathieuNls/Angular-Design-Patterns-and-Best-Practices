@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import {MySingleton} from './singleton';
+import { ApiService } from './api.service';
 
 @Component({
   selector: 'app-root',
@@ -8,11 +7,9 @@ import {MySingleton} from './singleton';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'app';
 
-  constructor(){
-    MySingleton.getInstance().doStuff();
-
-    console.log(new Date().getTime());
+  public constructor(api:ApiService){
+    console.log(api);
   }
 }
